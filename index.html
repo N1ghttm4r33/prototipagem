@@ -9,40 +9,36 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f8f8f8;
+        background-color: #222;
+        color: #eee;
     }
     .container {
         max-width: 1200px;
         margin: 20px auto;
         padding: 20px;
-        background-color: #fff;
+        background-color: #333;
         border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
     h2 {
-        color: #333;
-    }
-    .feature {
-        margin-bottom: 30px;
-    }
-    .feature h3 {
-        color: #666;
-        margin-bottom: 10px;
-    }
-    .feature p {
-        color: #777;
-    }
-    .icon {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        background-color: #007bff;
         color: #fff;
-        border-radius: 50%;
-        margin-right: 10px;
-        font-size: 24px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #555;
+    }
+    th {
+        background-color: #444;
+    }
+    .cardinality {
+        font-style: italic;
+        color: #aaa;
     }
 </style>
 </head>
@@ -51,77 +47,73 @@
 <div class="container">
     <h2>Características de um Jogo</h2>
 
-    <div class="feature">
-        <div class="icon">&#x1F3AE;</div>
-        <h3>Gameplay</h3>
-        <p>A mecânica central do jogo, incluindo controles, objetivos e interações do jogador.</p>
-    </div>
-    
-    <div class="feature">
-        <div class="icon">&#x1F3A8;</div>
-        <h3>Gráficos e Arte</h3>
-        <p>O estilo visual do jogo, que pode variar de pixel art a gráficos realistas em 3D.</p>
-    </div>
-    
-    <div class="feature">
-        <div class="icon">&#x1F4D6;</div>
-        <h3>História e Enredo</h3>
-        <p>A narrativa que guia o jogador através do jogo, incluindo personagens, diálogos e reviravoltas na trama.</p>
-    </div>
-    
-    <div class="feature">
-        <div class="icon">&#x1F30F;</div>
-        <h3>Mundo e Ambiente</h3>
-        <p>O cenário onde o jogo se passa, incluindo mapas, níveis, paisagens e atmosfera.</p>
-    </div>
-    
-    <div class="feature">
-        <div class="icon">&#x1F50A;</div>
-        <h3>Áudio e Música</h3>
-        <p>Os efeitos sonoros que complementam as ações do jogador e a trilha sonora que cria a atmosfera do jogo.</p>
-    </div>
-    
-    <div class="feature">
-        <div class="icon">&#x1F4A3;</div>
-        <h3>Desafio e Progressão</h3>
-        <p>A dificuldade gradual do jogo e a sensação de progresso à medida que o jogador avança.</p>
-    </div>
-    
-    <div class="feature">
-        <div class="icon">&#x1F503;</div>
-        <h3>Replay Value</h3>
-        <p>Elementos que incentivam os jogadores a jogar novamente, como diferentes finais, modos de jogo alternativos ou elementos gerados proceduralmente.</p>
-    </div>
-    
-    <div class="feature">
-        <div class="icon">&#x1F46B;</div>
-        <h3>Multiplayer</h3>
-        <p>A capacidade de jogar com ou contra outros jogadores, seja localmente ou online.</p>
-    </div>
-    
-    <div class="feature">
-        <div class="icon">&#x1F6E0;</div>
-        <h3>Personalização e Customização</h3>
-        <p>A capacidade de os jogadores personalizarem seus personagens, veículos, armas ou outros elementos do jogo.</p>
-    </div>
-    
-    <div class="feature">
-        <div class="icon">&#x1F4B0;</div>
-        <h3>Exploração e Descoberta</h3>
-        <p>A possibilidade de os jogadores explorarem o mundo do jogo, descobrindo segredos, itens ocultos e áreas desconhecidas.</p>
-    </div>
-    
-    <div class="feature">
-        <div class="icon">&#x1F46F;</div>
-        <h3>Socialização e Comunidade</h3>
-        <p>A integração com plataformas de mídia social e recursos que permitem aos jogadores interagirem e compartilharem experiências com outros jogadores.</p>
-    </div>
-    
-    <div class="feature">
-        <div class="icon">&#x1F3AD;</div>
-        <h3>Imersão</h3>
-        <p>A capacidade de mergulhar os jogadores no mundo do jogo, criando uma experiência envolvente e cativante.</p>
-    </div>
+    <table>
+        <tr>
+            <th>Característica</th>
+            <th>Descrição</th>
+            <th>Cardinalidade</th>
+        </tr>
+        <tr>
+            <td>Gameplay</td>
+            <td>A mecânica central do jogo, incluindo controles, objetivos e interações do jogador.</td>
+            <td>1 <-> 1</td>
+        </tr>
+        <tr>
+            <td>Gráficos e Arte</td>
+            <td>O estilo visual do jogo, que pode variar de pixel art a gráficos realistas em 3D.</td>
+            <td>1 <-> 1</td>
+        </tr>
+        <tr>
+            <td>História e Enredo</td>
+            <td>A narrativa que guia o jogador através do jogo, incluindo personagens, diálogos e reviravoltas na trama.</td>
+            <td>1 <-> 1</td>
+        </tr>
+        <tr>
+            <td>Mundo e Ambiente</td>
+            <td>O cenário onde o jogo se passa, incluindo mapas, níveis, paisagens e atmosfera.</td>
+            <td>1 <-> 1</td>
+        </tr>
+        <tr>
+            <td>Áudio e Música</td>
+            <td>Os efeitos sonoros que complementam as ações do jogador e a trilha sonora que cria a atmosfera do jogo.</td>
+            <td>1 <-> 1</td>
+        </tr>
+        <tr>
+            <td>Desafio e Progressão</td>
+            <td>A dificuldade gradual do jogo e a sensação de progresso à medida que o jogador avança.</td>
+            <td>1 <-> 1</td>
+        </tr>
+        <tr>
+            <td>Replay Value</td>
+            <td>Elementos que incentivam os jogadores a jogar novamente, como diferentes finais, modos de jogo alternativos ou elementos gerados proceduralmente.</td>
+            <td>1 <-> 1</td>
+        </tr>
+        <tr>
+            <td>Multiplayer</td>
+            <td>A capacidade de jogar com ou contra outros jogadores, seja localmente ou online.</td>
+            <td>1 <-> n</td>
+        </tr>
+        <tr>
+            <td>Personalização e Customização</td>
+            <td>A capacidade de os jogadores personalizarem seus personagens, veículos, armas ou outros elementos do jogo.</td>
+            <td>1 <-> 1</td>
+        </tr>
+        <tr>
+            <td>Exploração e Descoberta</td>
+            <td>A possibilidade de os jogadores explorarem o mundo do jogo, descobrindo segredos, itens ocultos e áreas desconhecidas.</td>
+            <td>1 <-> 1</td>
+        </tr>
+        <tr>
+            <td>Socialização e Comunidade</td>
+            <td>A integração com plataformas de mídia social e recursos que permitem aos jogadores interagirem e compartilharem experiências com outros jogadores.</td>
+            <td>1 <-> n</td>
+        </tr>
+        <tr>
+            <td>Imersão</td>
+            <td>A capacidade de mergulhar os jogadores no mundo do jogo, criando uma experiência envolvente e cativante.</td>
+            <td>1 <-> 1</td>
+        </tr>
+    </table>
 </div>
 
 </body>
