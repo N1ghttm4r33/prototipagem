@@ -1,6 +1,6 @@
 # prototipagem
 
-|    Empresa    |    -> |    1/N Funcionario    |
+|    Empresa    |    1/N Funcionario    |
 | ------------- |
 |    1/N Engine     | -> |    1/N Renderização Gráfica    | -> |    1/N Física    | -> |    1/N Áudio    | -> |    1/N Gerenciamento de Recursos    | 
                       -> |    1/N Inteligência Artificial    | -> |    1/N Scripting    |
